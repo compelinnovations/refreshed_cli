@@ -15,7 +15,7 @@ class RemoveCommand extends Command {
       PubspecUtils.removeDependencies(package);
     }
 
-    //if (GetCli.arguments.first == 'remove') {
+    //if (RefreshedCli.arguments.first == 'remove') {
     await ShellUtils.pubGet();
     //}
   }

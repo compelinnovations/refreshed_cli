@@ -15,7 +15,7 @@ class PubspecLock {
       var pathToPubLock = join(dirname(scriptFile), '../pubspec.lock');
       final file = File(pathToPubLock);
       var text = loadYaml(await file.readAsString());
-      if (text['packages']['get_cli'] == null) {
+      if (text['packages']['refreshed_cli'] == null) {
         if (isDevVersion()) {
           if (!disableLog) {
             LogService.info('Development version');
@@ -23,12 +23,11 @@ class PubspecLock {
         }
         return null;
       }
-      var version = text['packages']['get_cli']['version'].toString();
+      var version = text['packages']['refreshed_cli']['version'].toString();
       return version;
     } on Exception catch (_) {
       if (!disableLog) {
-        LogService.error(
-            Translation(LocaleKeys.error_cli_version_not_found).tr);
+        LogService.error(Translation(LocaleKeys.error_cli_version_not_found).tr);
       }
       return null;
     }

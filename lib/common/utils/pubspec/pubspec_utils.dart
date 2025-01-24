@@ -26,12 +26,12 @@ class PubspecUtils {
   /// separtor
   static final _mapSep = _PubValue<String>(() {
     var yaml = pubSpec.dependencies;
-    if (yaml.containsKey('get_cli')) {
-      final mapYaml = yaml['get_cli'] as Map;
+    if (yaml.containsKey('refreshed_cli')) {
+      final mapYaml = yaml['refreshed_cli'] as Map;
       if (mapYaml.containsKey('separator')) {
         return (mapYaml['separator'] as String?) ?? ''; // Your modified dependencies map
-        // if ((yaml['get_cli'] as Map).containsKey('separator')) {
-        //   return (yaml['get_cli']['separator'] as String?) ?? '';
+        // if ((yaml['refreshed_cli'] as Map).containsKey('separator')) {
+        //   return (yaml['refreshed_cli']['separator'] as String?) ?? '';
         // }
       }
     }
@@ -49,8 +49,8 @@ class PubspecUtils {
     () {
       try {
         var yaml = pubSpec.dependencies;
-        if (yaml.containsKey('get_cli')) {
-          final mapYaml = yaml['get_cli'] as Map;
+        if (yaml.containsKey('refreshed_cli')) {
+          final mapYaml = yaml['refreshed_cli'] as Map;
           if (mapYaml.containsKey('sub_folder')) {
             return (mapYaml['sub_folder'] as bool?);
           }

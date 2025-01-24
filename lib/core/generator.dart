@@ -3,15 +3,15 @@ import '../commands/impl/help/help.dart';
 import '../commands/interface/command.dart';
 import '../common/utils/logger/log_utils.dart';
 
-class GetCli {
+class RefreshedCli {
   final List<String> _arguments;
 
-  GetCli(this._arguments) {
+  RefreshedCli(this._arguments) {
     _instance = this;
   }
 
-  static GetCli? _instance;
-  static GetCli? get to => _instance;
+  static RefreshedCli? _instance;
+  static RefreshedCli? get to => _instance;
 
   static List<String> get arguments => to!._arguments;
 

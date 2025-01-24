@@ -1,36 +1,39 @@
 ## [1.8.2]
+
 - Replace cli_dialog with dcli
 - version dependency updated
 - Added dafault value to menu & spaces
 - Fixed some lints with views
 
 ## [1.8.1]
+
 - Fixed null error in pub version
 - Fixed get view by adding const
 
 ## [1.8.0]
+
 - Update dependencies, remove pedantic and effective dart from lints options
 
 ## [1.7.1]
+
 - Remove unmaintained dependencies
 
 ## [1.7.0]
+
 - Fix Path and null safety errors (@CpdnCristiano)
 - Translation to Chinese (@iwpz @zhangwanping)
-- Update Portugueses docs @ricardodalarme 
+- Update Portugueses docs @ricardodalarme
 - Add Italian translation (@giannuzzoexe)
 - Fix Generate Model null-safety error (@maxzod)
 - Fixed errors in Arc clean: (@Babar-Bashir, @shawon1fb)
 
-
-
 ## [1.6.0]
+
 - Fix cast error on local dependencies (@ahmednfwela)
 - Fix null safety model creator (@prabhah)
 - Fix windows path separator error (@CpdnCristiano)
 - Added new official linter (@Illusion47586)
 - Added german language(@ngjoni)
-
 
 ## [1.5.0]
 
@@ -49,11 +52,11 @@
 - Add alias for install: `get -i PACKAGE`
 - Add alias for create: `get -c page:name`
 - Add alias for generate: `get -g locales`
-- add turkish translation by @ahm3tcelik 
+- add turkish translation by @ahm3tcelik
 
 ## [1.4.4]
 
-- Add alias getx:  `getx command`
+- Add alias getx: `getx command`
 
 ## [1.4.3]
 
@@ -71,14 +74,14 @@
 
 - update README
 - and others improvements
-- add [separator](https://github.com/jonataslaw/get_cli#separator-file-type)
+- add [separator](https://github.com/jonataslaw/refreshed_cli#separator-file-type)
 
 ## [1.4.0]
 
 - fix init command on issue #43
 - add internationalization for CLI
 - fix sort routes
-- add option with to controller e view here [more here](https://github.com/jonataslaw/get_cli#generate-controller-for-model-online)
+- add option with to controller e view here [more here](https://github.com/jonataslaw/refreshed_cli#generate-controller-for-model-online)
 - add command sort
 - and others improvements
 - fix check update

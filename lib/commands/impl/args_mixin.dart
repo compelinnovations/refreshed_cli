@@ -4,7 +4,7 @@ import 'package:recase/recase.dart';
 import '../../core/generator.dart';
 
 mixin ArgsMixin {
-  final List<String> _args = GetCli.arguments;
+  final List<String> _args = RefreshedCli.arguments;
 
   /// all arguments
   ///
@@ -110,7 +110,7 @@ mixin ArgsMixin {
   }
 }
 List<String> _getArgs() {
-  var args = List.of(GetCli.arguments);
+  var args = List.of(RefreshedCli.arguments);
   _removeDefaultArgs(args);
   args.removeWhere((element) => element.startsWith('-'));
   return args;
@@ -131,7 +131,7 @@ void _removeDefaultArgs(List<String> args) {
 }
 
 List<String> _getFlags() {
-  var args = List.of(GetCli.arguments);
+  var args = List.of(RefreshedCli.arguments);
   var flags = args.where((element) {
     return element.startsWith('-') && element != '--debug';
   }).toList();
@@ -140,15 +140,15 @@ List<String> _getFlags() {
 }
 
 int _getIndexArg(String arg) {
-  return GetCli.arguments.indexWhere((element) => element == arg);
+  return RefreshedCli.arguments.indexWhere((element) => element == arg);
 }
 
 String _getArg(String arg) {
   var index = _getIndexArg(arg);
   if (index != -1) {
-    if (index + 1 < GetCli.arguments.length) {
+    if (index + 1 < RefreshedCli.arguments.length) {
       index++;
-      return GetCli.arguments[index];
+      return RefreshedCli.arguments[index];
     } else {
       throw ClientException("the '$arg' argument is empty");
     }

@@ -30,10 +30,10 @@ class ShellUtils {
   }
 
   static Future<void> update([bool isGit = false, bool forceUpdate = false]) async {
-    isGit = GetCli.arguments.contains('--git');
-    forceUpdate = GetCli.arguments.contains('-f');
+    isGit = RefreshedCli.arguments.contains('--git');
+    forceUpdate = RefreshedCli.arguments.contains('-f');
     if (!isGit && !forceUpdate) {
-      var versionInPubDev = await PubDevApi.getLatestVersionFromPackage('get_cli');
+      var versionInPubDev = await PubDevApi.getLatestVersionFromPackage('refreshed_cli');
 
       var versionInstalled = await PubspecLock.getVersionCli(disableLog: true);
 
@@ -42,20 +42,20 @@ class ShellUtils {
       }
     }
 
-    LogService.info('Upgrading get_cli …');
+    LogService.info('Upgrading refreshed_cli …');
 
     try {
       if (Platform.script.path.contains('flutter')) {
         if (isGit) {
-          await run('flutter pub global activate -sgit https://github.com/jonataslaw/get_cli/', verbose: true);
+          await run('flutter pub global activate -sgit https://github.com/jonataslaw/refreshed_cli/', verbose: true);
         } else {
-          await run('flutter pub global activate get_cli', verbose: true);
+          await run('flutter pub global activate refreshed_cli', verbose: true);
         }
       } else {
         if (isGit) {
-          await run('flutter pub global activate -sgit https://github.com/jonataslaw/get_cli/', verbose: true);
+          await run('flutter pub global activate -sgit https://github.com/jonataslaw/refreshed_cli/', verbose: true);
         } else {
-          await run('flutter pub global activate get_cli', verbose: true);
+          await run('flutter pub global activate refreshed_cli', verbose: true);
         }
       }
       return LogService.success(LocaleKeys.success_update_cli.tr);

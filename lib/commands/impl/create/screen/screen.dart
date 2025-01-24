@@ -23,16 +23,15 @@ class CreateScreenCommand extends Command {
   @override
   Future<void> execute() async {
     var isProject = false;
-    if (GetCli.arguments[0] == 'create') {
-      isProject = GetCli.arguments[1].split(':').first == 'project';
+    if (RefreshedCli.arguments[0] == 'create') {
+      isProject = RefreshedCli.arguments[1].split(':').first == 'project';
     }
     var name = this.name;
     if (name.isEmpty || isProject) {
       name = 'home';
     }
 
-    var newFileModel =
-        Structure.model(name, 'screen', true, on: onCommand, folderName: name);
+    var newFileModel = Structure.model(name, 'screen', true, on: onCommand, folderName: name);
     var pathSplit = Structure.safeSplitPath(newFileModel.path!);
 
     pathSplit.removeLast();
@@ -64,8 +63,7 @@ class CreateScreenCommand extends Command {
   void _writeFiles(String path, String name, {bool overwrite = false}) {
     var isServer = PubspecUtils.isServerProject;
 
-    var controller = handleFileCreate(name, 'controller', path, true,
-        ControllerSample('', name, isServer), 'controllers', '.');
+    var controller = handleFileCreate(name, 'controller', path, true, ControllerSample('', name, isServer), 'controllers', '.');
 
     var controllerImport = Structure.pathToDirImport(controller.path);
 
@@ -102,8 +100,7 @@ class CreateScreenCommand extends Command {
         '${Structure.pathToDirImport(view.path)}';
     addExport('lib/presentation/screens.dart', "export '$exportView';");
 
-    addExport(
-        'lib/infrastructure/navigation/bindings/controllers/controllers_bindings.dart',
+    addExport('lib/infrastructure/navigation/bindings/controllers/controllers_bindings.dart',
         "export 'package:${PubspecUtils.projectName}/${Structure.pathToDirImport(binding.path)}'; ");
     arcAddRoute(name);
   }

@@ -7,10 +7,10 @@ Official CLI for the GetX™ framework.
 
 ```dart
 // To install:
-pub global activate get_cli
+pub global activate refreshed_cli
 // (to use this add the following to system PATH: [FlutterSDKInstallDir]\bin\cache\dart-sdk\bin
 
-flutter pub global activate get_cli
+flutter pub global activate refreshed_cli
 
 // To create a flutter project in the current directory:
 // Note: By default it will take the folder's name as project name
@@ -165,7 +165,7 @@ or with url
 _run_
 
 ```shell
-  get create controller:auth with 'https://raw.githubusercontent.com/jonataslaw/get_cli/master/samples_file/controller.dart.example' on your_folder
+  get create controller:auth with 'https://raw.githubusercontent.com/jonataslaw/refreshed_cli/master/samples_file/controller.dart.example' on your_folder
 ```
 
 input:
@@ -352,7 +352,7 @@ One day a user asked me, if it was possible to change what the final name of the
 Example:
 
 ```yaml
-get_cli:
+refreshed_cli:
   separator: "."
 ```
 
@@ -363,7 +363,7 @@ When you create a page or screen, each module will have bindings, controllers, v
 If you prefer to have a flat file hierarchy, add the following lines to your `pubspec.yaml`:
 
 ```yml
-get_cli:
+refreshed_cli:
   sub_folder: false
 ```
 
@@ -373,7 +373,7 @@ To help you organize your imports a new command was created: `get sort`, in addi
 When using get sort all files are renamed, with the [separator](#separator-file-type).
 To not rename use the `--skipRename` flag.
 
-You are one of those who prefer to use relative imports instead of project imports, use the `--relative` option. get_cli will convert.
+You are one of those who prefer to use relative imports instead of project imports, use the `--relative` option. refreshed_cli will convert.
 
 ### Internationalization of the cli
 

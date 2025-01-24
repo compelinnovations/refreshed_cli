@@ -26,7 +26,7 @@
     "invalid_file_or_directory": "%s 不是有效的文件或目录",
     "package_not_found": "依赖: %s 在 pub.dev 中没有找到",
     "cli_version_not_found": "没有找到已安装版本。",
-    "update_cli": "升级 get_cli 错误",
+    "update_cli": "升级 refreshed_cli 错误",
     "folder_not_found": "文件夹 %s 未找到",
     "file_not_found": "在 %s 中没有找到文件",
     "access_denied": "对 %s 的访问被拒绝",
@@ -53,14 +53,14 @@
     "install": "为你的项目安装依赖:",
     "remove": "为你的项目移除依赖:",
     "sort": "排序 import 并格式化 dart 文件",
-    "update": "更新 GET_CLI",
+    "update": "更新 refreshed_cli",
     "version": "显示当前 CLI 版本'"
   },
   "info": {
     "unnecessary_flag": "%s 是多余的",
     "unnecessary_flag_prural": "%s 是多余的",
     "package_not_installed": "Package: %s 在本应用中未安装",
-    "cli_last_version_already_installed": "您已安装 get_cli 最新版本",
+    "cli_last_version_already_installed": "您已安装 refreshed_cli 最新版本",
     "no_file_overwritten": "没有文件被覆盖",
     "update_available": "新版本可用！当前版本: %s",
     "update_available2": "新版本可用: %s 运行:"

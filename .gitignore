@@ -28,6 +28,6 @@ doc/api/
 .DS_Store
 
 ### extra files
-bin/.get_cli.yaml
+bin/.refreshed_cli.yaml
 cristiano_teste/*
 bin/*.exe
